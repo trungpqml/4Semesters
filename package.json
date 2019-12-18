@@ -6,6 +6,10 @@
   "author": "trungpq <trungpq.ml@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }

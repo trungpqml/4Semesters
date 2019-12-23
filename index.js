@@ -3,6 +3,7 @@ const insertion_sort = require("./src/insertion_sort")
 const merge_sort = require("./src/merge_sort")
 const ArrayList = require("./src/array_list")
 const LinkedList = require("./src/linked_list")
+const BinarySearchTree = require("./src/binary_search_tree")
 
 // var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
 // var nums = [1, 2, 3, 4, 5]
@@ -18,5 +19,8 @@ const LinkedList = require("./src/linked_list")
 
 // console.log(array.length)
 
-let linked_list = new LinkedList()
-console.log(linked_list.length)
+// let linked_list = new LinkedList()
+// console.log(linked_list.length)
+
+let tree = new BinarySearchTree()
+tree.add(1)

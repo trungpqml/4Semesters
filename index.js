@@ -8,8 +8,8 @@ const BinarySearchTree = require("./src/binary_search_tree")
 const AVL = require("./src/avl")
 const HashTableSet = require("./src/hash")
 
-var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
-// var nums = [1, 2, 3, 4, 5]
+// var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
+var nums = [1, 2, 3, 4, 5]
 // console.log(`Before sorting: ${nums.join(" - ")}`)
 
 // nums = bubble_sort(nums)
@@ -32,4 +32,30 @@ var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
 // let tree = new AVL()
 // nums.map(item => tree.add(item))
 
-let hash = new HashTableSet()
+// let hash = new HashTableSet()
+
+// console.log(`Before mapping ${nums.join(" ")}`)
+// var transformed = nums.map(num => num + 1)
+
+// console.log(`After mapping ${transformed.join(" ")}`)
+
+//Function double input
+const double = num => num * 2
+const doubleEach = input => input.map(double)
+
+const square = num => num * num
+const squareEach = input => input.map(square)
+
+const doubleAndSquareEach = input => input.map(double).map(square)
+
+// console.log(nums)
+// console.log(doubleAndSquareEach(nums))
+const myMap = (array, fn) => {
+    const answer = []
+    array.forEach(element => {
+        answer.push(fn(element))
+    });
+    return answer
+}
+
+console.log(myMap(nums, square))

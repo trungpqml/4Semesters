@@ -67,4 +67,11 @@ const squareAndSubstract = list => {
     return list.map(square).reduce((acc, num) => acc + num)
 };
 
-console.log(squareAndSubstract(nums))
+const filterOutOdds = list => list.filter(num => num % 2 === 0)
+
+const sumEvenNumbers = list => {
+    return list
+        .filter(num => num % 2 === 0)
+        .reduce((acc, num) => acc + num)
+}
+console.log(sumEvenNumbers(nums))

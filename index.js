@@ -58,4 +58,13 @@ const myMap = (array, fn) => {
     return answer
 }
 
-console.log(myMap(nums, square))
+// Reduce
+const sum = list => {
+    return list.reduce((acc, num) => acc + num, 1)
+}
+
+const squareAndSubstract = list => {
+    return list.map(square).reduce((acc, num) => acc + num)
+};
+
+console.log(squareAndSubstract(nums))

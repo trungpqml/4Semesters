@@ -6,6 +6,7 @@ const ArrayList = require("./src/array_list")
 const LinkedList = require("./src/linked_list")
 const BinarySearchTree = require("./src/binary_search_tree")
 const AVL = require("./src/avl")
+const HashTableSet = require("./src/hash")
 
 var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
 // var nums = [1, 2, 3, 4, 5]
@@ -28,6 +29,7 @@ var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
 // let tree = new BinarySearchTree()
 // tree.add(1)
 
-let tree = new AVL()
+// let tree = new AVL()
+// nums.map(item => tree.add(item))
 
-nums.map(item => tree.add(item))
+let hash = new HashTableSet()

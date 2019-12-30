@@ -40,38 +40,39 @@ var nums = [1, 2, 3, 4, 5]
 // console.log(`After mapping ${transformed.join(" ")}`)
 
 //Function double input
-const double = num => num * 2
-const doubleEach = input => input.map(double)
+// const double = num => num * 2
+// const doubleEach = input => input.map(double)
 
-const square = num => num * num
-const squareEach = input => input.map(square)
+// const square = num => num * num
+// const squareEach = input => input.map(square)
 
-const doubleAndSquareEach = input => input.map(double).map(square)
+// const doubleAndSquareEach = input => input.map(double).map(square)
 
 // console.log(nums)
 // console.log(doubleAndSquareEach(nums))
-const myMap = (array, fn) => {
-    const answer = []
-    array.forEach(element => {
-        answer.push(fn(element))
-    });
-    return answer
-}
+// const myMap = (array, fn) => {
+//     const answer = []
+//     array.forEach(element => {
+//         answer.push(fn(element))
+//     });
+//     return answer
+// }
 
 // Reduce
-const sum = list => {
-    return list.reduce((acc, num) => acc + num, 1)
-}
+// const sum = list => {
+//     return list.reduce((acc, num) => acc + num, 1)
+// }
 
-const squareAndSubstract = list => {
-    return list.map(square).reduce((acc, num) => acc + num)
-};
+// const squareAndSubstract = list => {
+//     return list.map(square).reduce((acc, num) => acc + num)
+// };
 
-const filterOutOdds = list => list.filter(num => num % 2 === 0)
+// const filterOutOdds = list => list.filter(num => num % 2 === 0)
 
-const sumEvenNumbers = list => {
-    return list
-        .filter(num => num % 2 === 0)
-        .reduce((acc, num) => acc + num)
-}
-console.log(sumEvenNumbers(nums))
+// const sumEvenNumbers = list => {
+//     return list
+//         .filter(num => num % 2 === 0)
+//         .reduce((acc, num) => acc + num)
+// }
+// console.log(sumEvenNumbers(nums))
+

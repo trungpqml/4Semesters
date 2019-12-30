@@ -36,11 +36,38 @@ const memoizedClosuredTimes10 = () => {
     // return memoTimes10
 }
 
-const memoClosureTimes10 = memoizedClosuredTimes10()
-console.log("~~~~~~ Task 3 ~~~~~~")
+// const memoClosureTimes10 = memoizedClosuredTimes10()
+// console.log("~~~~~~ Task 3 ~~~~~~")
+// try {
+//     console.log("Task 3 calculated value:", memoClosureTimes10(9))
+//     console.log("Task 3 cached value:", memoClosureTimes10(9))
+// } catch (error) {
+//     console.error("Task 3:", error)
+// }
+
+const add10 = (n) => (n + 10)
+
+const memoize = (cb) => {
+    const cache = {}
+    return (n) => {
+        if (n in cache) {
+            console.log("Fetch from cache")
+            return cache[n]
+        } else {
+            console.log("Calculating")
+            let result = cb(n)
+            cache[n] = result
+            return result
+        }
+    }
+}
+
+// const memoizedTimes10 = memoize(times10)
+const memoizedAdd10 = memoize(add10)
+console.log("~~~~~~~~~~ Task 4 ~~~~~~~~~~")
 try {
-    console.log("Task 3 calculated value:", memoClosureTimes10(9))
-    console.log("Task 3 cached value:", memoClosureTimes10(9))
-} catch (error) {
-    console.error("Task 3:", error)
+    console.log("Task 4 calculated value: ", memoizedAdd10(9))
+    console.log("Task 4 cached value:", memoizedAdd10(9))
+} catch (e) {
+    console.error(e);
 }

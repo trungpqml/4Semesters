@@ -77,34 +77,34 @@ const HashTableSet = require("./src/hash")
 // console.log(sumEvenNumbers(nums))
 
 /*
-* Optimization and Caching
-*/
+ * Optimization and Caching
+ */
 
 const is_unique = (arr) => {
-	let result = true
-	for (var i = 0; i < arr.length; i++) {
-		console.log(`Outer loop i === ${i}`)
-		for (var j = 0; j < arr.length; j++) {
-			console.log(`\tInner loop j === ${j}`)
-			if (i != j && arr[i] == arr[j]) {
-				return false
-			}
-		}
-		console.log("---")
-	}
-	return result
+    let result = true
+    for (var i = 0; i < arr.length; i++) {
+        console.log(`Outer loop i === ${i}`)
+        for (var j = 0; j < arr.length; j++) {
+            console.log(`\tInner loop j === ${j}`)
+            if (i != j && arr[i] == arr[j]) {
+                return false
+            }
+        }
+        console.log("---")
+    }
+    return result
 }
 
 const is_unique_cache = (arr) => {
-	let result = true
-	let breadcumbs = {}
-	for (var i = 0; i < arr.length; i++) {
-		console.log(`Loop ${i}`)
-		if (breadcumbs[arr[i]]) {
-			return false
-		} else {
-			breadcumbs[arr[i]] = true
-		}
-	}
-	return result
+    let result = true
+    let breadcumbs = {}
+    for (var i = 0; i < arr.length; i++) {
+        console.log(`Loop ${i}`)
+        if (breadcumbs[arr[i]]) {
+            return false
+        } else {
+            breadcumbs[arr[i]] = true
+        }
+    }
+    return result
 }

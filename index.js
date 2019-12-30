@@ -9,7 +9,7 @@ const AVL = require("./src/avl")
 const HashTableSet = require("./src/hash")
 
 // var nums = [10, 5, 3, 8, 13, 18, 29, 2, 6, 4, 7, 9, 1];
-var nums = [1, 2, 3, 4, 5]
+//var nums = [1, 2, 3, 4, 5]
 // console.log(`Before sorting: ${nums.join(" - ")}`)
 
 // nums = bubble_sort(nums)
@@ -76,3 +76,39 @@ var nums = [1, 2, 3, 4, 5]
 // }
 // console.log(sumEvenNumbers(nums))
 
+/*
+* Optimization and Caching
+*/
+
+const is_unique = (arr) => {
+	let result = true
+	for (var i = 0; i < arr.length; i++) {
+		console.log(`Outer loop i === ${i}`)
+		for (var j = 0; j < arr.length; j++) {
+			console.log(`\tInner loop j === ${j}`)
+			if (i != j && arr[i] == arr[j]) {
+				return false
+			}
+		}
+		console.log("---")
+	}
+	return result
+}
+
+const is_unique_cache = (arr) => {
+	let result = true
+	let breadcumbs = {}
+	for (var i = 0; i < arr.length; i++) {
+		console.log(`Loop ${i}`)
+		if (breadcumbs[arr[i]]) {
+			return false
+		} else {
+			breadcumbs[arr[i]] = true
+		}
+	}
+	return result
+}
+
+console.log(is_unique_cache([1,2,3]))
+console.log("---")
+console.log(is_unique_cache([1,1,2]))

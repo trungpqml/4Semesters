@@ -108,7 +108,3 @@ const is_unique_cache = (arr) => {
 	}
 	return result
 }
-
-console.log(is_unique_cache([1,2,3]))
-console.log("---")
-console.log(is_unique_cache([1,1,2]))

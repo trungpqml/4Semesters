@@ -46,15 +46,6 @@ const stitch = (left, right) => {
             results.push(right.shift());
         }
     }
-    // while (left.length) {
-    //     results.push(left.shift());
-    // }
-    // while (right.length) {
-    //     results.push(right.shift());
-    // }
-    // return results;
-
-    // using ES6
     return [...results, ...left, ...right]
 }
 

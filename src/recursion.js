@@ -76,4 +76,60 @@ function jointElementIterartive(array, joinString) {
     return result
 }
 
-console.log(jointElementIterartive(['s', 'cr', 't cod', ' :) :)'], 'e'))
+// console.log(jointElementIterartive(['s', 'cr', 't cod', ' :) :)'], 'e'))
+
+const factorize = (n) => {
+    if (n <= 1) {
+        return 1
+    } else {
+        return n * factorize(n - 1)
+    }
+};
+
+const memo_calculate = (cb) => {
+    const cache = {}
+    return execute = (n) => {
+        if (n in cache) {
+            console.log("Fetching from cache...")
+            return cache[n]
+        } else {
+            console.log("Not calculated yet!")
+            let result = cb(n)
+            cache[n] = result
+            return result
+        }
+    }
+}
+
+// const my_factor = memo_calculate(factorize)
+// console.log(my_factor(70))
+// console.log(my_factor(70))
+
+const memoize = (fn) => {
+    let cache = {}
+    return (...args) => {
+        let n = args[0]
+        if (n in cache) {
+            console.log("Fetching from cache", n)
+            return cache[n]
+        } else {
+            console.log("Calculating result", n)
+            let result = fn(n)
+            cache[n] = result
+            return result
+        }
+    }
+}
+
+const factorialize = memoize(
+    (x) => {
+        if (x === 0) {
+            return 1
+        } else {
+            return x * factorialize(x - 1)
+        }
+    }
+)
+
+console.log(factorialize(5))
+console.log(factorialize(5))

@@ -82,5 +82,5 @@ const recursive_binary_search = (array, item) => {
     }
 }
 
-// console.log(recursive_binary_search(merge_sort([12, 30, 89, 45, 5, 3, 23, 11, 9, 2, 7]), 10))
-console.log(recursive_binary_search([2, 7, 9], 10))
+console.log(recursive_binary_search(merge_sort([12, 30, 89, 45, 5, 3, 23, 11, 9, 2, 7]), 10))
+// console.log(recursive_binary_search([2, 7, 9], 10))
